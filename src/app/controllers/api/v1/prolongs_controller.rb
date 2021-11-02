@@ -11,7 +11,7 @@ class Api::V1::ProlongsController < ApplicationController
         prolong = Prolong.new(prolong_params)
     
         if prolong.save
-          render json: { status: 200, prolong: prolong }
+          render json: { status: 200, prolongs: prolong}
         else
           render json: { status: 500, message: "Prolongの作成に失敗しました" }
         end

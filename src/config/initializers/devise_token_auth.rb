@@ -46,6 +46,7 @@ DeviseTokenAuth.setup do |config|
                          :'client' => 'client',
                          :'expiry' => 'expiry',
                          :'uid' => 'uid',
+                         :'id' => 'id',
                          :'token-type' => 'token-type' }
 
   # By default, only Bearer Token authentication is implemented out of the box.
