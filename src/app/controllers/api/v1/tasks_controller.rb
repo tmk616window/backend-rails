@@ -1,16 +1,14 @@
 class Api::V1::TasksController < ApplicationController
     def index
             @tasks = Task.all
-            render json: { status: 200, tasks: @tasks }, include: [:prolongs, :tools, :contents, :comments , :user, :likes]
+            render json: { status: 200, tasks: @tasks }, include: [:prolongs]
         end
 
     def show
         @task = Task.find(params[:id])
-
         render json: {status: 200, task:{task:@task, prolongs: @task.prolongs, tools: @task.tools, contents: @task.contents, comments: @task.comments, user: @task.user, likes: @task.likes}}
     end
 
-    
     def create
         task = Task.new(task_params)
 
