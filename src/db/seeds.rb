@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# puts 'Creating todos...'
+puts 'Creating todos...'
 
 # # 適当なTodoを5つ作成
 # 5.times do |i|
@@ -27,13 +27,17 @@
 
 #   puts '...Finished!'
 
-  5.times do |i|
-    Content.create(title: "lange#{i + 1}", text: "test#{i + 1}",task_id:21)
-  end
+  # 5.times do |i|
+  #   Content.create(title: "lange#{i + 1}", text: "test#{i + 1}",task_id:21)
+  # end
   
 
+  # 5.times do |i|
+  #   Comment.create(point: 3, text: "test#{i + 1}", user_id:2 ,task_id:21)
+  # end
+
   5.times do |i|
-    Comment.create(point: 3, text: "test#{i + 1}", user_id:2 ,task_id:21)
+    ChatMessage.create(text: "test", message_id: 3, user_id:3 ,chat_id:2)
   end
 
 
@@ -47,4 +51,4 @@
   #   Like.create(user_id:i + 1, task_id: 5)
   # end
 
-  # puts '...Finished!'
+  puts '...Finished!'
